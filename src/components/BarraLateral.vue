@@ -7,9 +7,9 @@
 </template>
 
 <script lang="ts">
-import { difeneComponent } from 'vue'
+import { defineComponent } from 'vue'
 
-export default difeneComponent({
+export default defineComponent({
     name: 'BarraLateral'
 })
 </script>
