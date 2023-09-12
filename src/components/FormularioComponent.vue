@@ -2,10 +2,10 @@
     <div class="box">
         <div class="columns">
             <div class="columns is-8" role="form" aria-label="Formulario para criação de uma nova tarfea">
-                <input type="text" class="input" placeholder="Qual tarefa voce deja iniciar">
+                <input type="text" class="input" placeholder="Qual tarefa você deseja iniciar">
             </div>
             <div class="columns">
-                <div class="is-flex is align-items-center is-justify-contetnt-space-beteween">
+                <div class="is-flex is-align-items-center is-justify-content-space-between">
                     <section>
                         <strong>
                             {{ tempoDecorrido }}
