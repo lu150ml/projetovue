@@ -6,7 +6,7 @@
             </div>
             <div class="columns">
                 <div class="is-flex is-align-items-center is-justify-content-space-between">
-                    <CronometroTimer />
+                    <CronometroTimer :tempoEmSegundos="tempoEmSegundos"/>
                     <button class="button" @click="iniciar">
                         <span class="icon">
                             <i class="fas fa-play"></i>
