@@ -1,19 +1,19 @@
 <template>
   <div class="box">
     <div class="columns">
-        
+        <TemporizadorVue />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import CronometroTimer from "./Cronometro.vue";
+import TemporizadorVue from "./TemporizadorComponete.vue";
 
 export default defineComponent({
   name: "FormularioVue",
   components: {
-    CronometroTimer
+    TemporizadorVue
   }
 });
 </script>

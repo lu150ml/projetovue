@@ -34,7 +34,7 @@ import { defineComponent } from "vue";
 import CronometroTimer from "./Cronometro.vue";
 
 export default defineComponent({
-  name: "Temporizador",
+  name: "TemporizadorVue",
   components: {
     CronometroTimer,
   },
