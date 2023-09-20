@@ -1,16 +1,4 @@
 <template>
-  <div
-    class="columns is-8"
-    role="form"
-    aria-label="Formulario para criação de uma nova tarfea"
-  >
-    <input
-      type="text"
-      class="input"
-      placeholder="Qual tarefa você deseja iniciar"
-    />
-  </div>
-  <div class="columns">
     <div class="is-flex is-align-items-center is-justify-content-space-between">
       <CronometroTimer :tempoEmSegundos="tempoEmSegundos" />
       <button class="button" @click="iniciar" :disabled="cronometroRodando">
@@ -26,7 +14,6 @@
         <span>stop</span>
       </button>
     </div>
-  </div>
 </template>
 
 <script lang="ts">
@@ -35,6 +22,7 @@ import CronometroTimer from "./Cronometro.vue";
 
 export default defineComponent({
   name: "TemporizadorVue",
+  emits:['aoTemporizadorFinalizado'],
   components: {
     CronometroTimer,
   },
@@ -57,6 +45,8 @@ export default defineComponent({
     finalizar() {
       this.cronometroRodando = false
       clearInterval(this.cronometro);
+      this.$emit('aoTemporizadorFinalizado',this.tempoEmSegundos)
+      this.tempoEmSegundos = 0
     },
   },
 });
